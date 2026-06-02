@@ -6,7 +6,7 @@ Mersin'in köklü esnaflarından **Beyaz Piliç** için İleri Web Tasarımı de
 
 ## 🚀 Canlı Yayın Bağlantısı
 Sitenin yayındaki haline aşağıdaki adresten ulaşabilirsiniz:
-👉 **[beyaz-pilic.netlify.app](https://beyaz-pilic.netlify.app)**
+👉 **[beyaz-pilic.netlify.app](https://beyaz-pilic.vercel.app)**
 
 ---
 
@@ -14,7 +14,7 @@ Sitenin yayındaki haline aşağıdaki adresten ulaşabilirsiniz:
 * **Müşteri Adı:** Beyaz Piliç (Mersin)
 * **Sektör:** Gıda / Tavukçu / Çiğ Satış &amp; Pişirim
 * **Şubeler:** Yenişehir (Kök Şube) ve Mezitli
-* **İhtiyaç Tanımı:** İşletme çiğ tavuk satışı, közde pişirim ve gel-al paket sistemiyle hizmet vermesine ve 4 farklı platformda (GetirÇarşı, TrendyolExpress, YemekSepeti Market, MigrosYemek) yer almasına rağmen kurumsal kimliğini, güncel menüsünü ve doğrudan iletişim kanallarını tek bir merkezde toplayan modern bir web vitrinine ihtiyacı vardı. Bu proje ile bu dijital eksiklik giderilmiştir.
+* **İhtiyaç Tanımı:** İşletme çiğ tavuk satışı, közde pişirim ve gel-al paket sistemiyle hizmet vermesine ve 4 farklı platformda (GetirYemek, TrendyolExpress, YemekSepeti, MigrosYemek) yer almasına rağmen kurumsal kimliğini, güncel menüsünü ve doğrudan iletişim kanallarını tek bir merkezde toplayan modern bir web vitrinine ihtiyacı vardı. Bu proje ile bu dijital eksiklik giderilmiştir.
 
 ---
 

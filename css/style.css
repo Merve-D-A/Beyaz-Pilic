@@ -62,6 +62,10 @@
 
     html { scroll-behavior: smooth; }
 
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+
+    h1, h2, h3, h4, h5, h6 { font-weight: inherit; }
+
     body {
       font-family: var(--font-body);
       background: var(--bg);
@@ -113,13 +117,14 @@
     }
     .nav-links a:hover::after { width: 100%; }
     .theme-toggle {
+      position: fixed; bottom: 24px; right: 24px; z-index: 999;
       display: flex; align-items: center; justify-content: center;
-      background: none; border: 1.5px solid rgba(30, 64, 175, 0.1);
-      border-radius: 50%; width: 36px; height: 36px; cursor: pointer;
-      color: var(--navy); transition: all 0.3s; margin-right: 0.5rem;
-      flex-shrink: 0;
+      background: var(--panel); border: 1.5px solid var(--nav-border);
+      border-radius: 50%; width: 44px; height: 44px; cursor: pointer;
+      color: var(--navy); transition: all 0.3s;
+      box-shadow: 0 2px 12px var(--shadow);
     }
-    .theme-toggle:hover { border-color: var(--navy); background: rgba(30, 64, 175, 0.04); }
+    .theme-toggle:hover { border-color: var(--navy); transform: scale(1.08); }
     .theme-toggle svg { display: block; }
     .nav-toggle {
       display: none; flex-direction: column; gap: 5px; cursor: pointer;
@@ -280,16 +285,11 @@
     .hero-bg-img {
       width: 100%;
       height: 100%;
-      background: url('../images/izgara.webp') center / cover no-repeat;
+      object-fit: cover;
       clip-path: polygon(18% 0, 100% 0, 100% 100%, 0 100%);
       filter: sepia(0) saturate(1.4);
       opacity: 0.35;
       position: relative;
-    }
-    .hero-bg-img::before {
-      content: '';
-      position: absolute; inset: 0;
-      background: var(--hero-overlay);
     }
 
     /* ─── SECTION COMMON ─── */
@@ -340,10 +340,9 @@
     .about-grill {
       width: 100%; max-width: 380px; aspect-ratio: 1;
       border-radius: 50%;
-      background: url('../images/beyaz.webp') center / cover no-repeat;
+      object-fit: cover;
       border: 2px solid rgba(30, 64, 175, 0.08);
-      display: flex; align-items: center; justify-content: center;
-      position: relative; overflow: hidden;
+      position: relative;
     }
 
     /* ─── MENU ─── */
@@ -651,7 +650,7 @@
     .footer-bottom { max-width: 1200px; margin: 3rem auto 0; padding-top: 2rem; border-top: 1px solid var(--footer-border); display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem; color: var(--footer-text-more-dim); }
 
     /* ─── RESPONSIVE ─── */
-    @media (max-width: 900px) {
+    @media (max-width: 1024px) {
       .hero { padding: 6rem 2rem 3rem; flex-direction: column; text-align: center; }
       .hero p { margin: 0 auto 2.5rem; }
       .hero-buttons { justify-content: center; }
@@ -670,7 +669,9 @@
       .contact-form-card form { padding-left: 1.25rem; padding-right: 1.25rem; }
       .contact-form-head { padding-left: 1.25rem; }
     }
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
+      .container { padding: 0 1rem; }
+      .branch-hours { flex-direction: column; gap: 0.3rem; }
       .nav-links { position: fixed; top: 0; right: -100%; width: 70%; height: 100vh; background: var(--bg); flex-direction: column; padding: 6rem 2rem; gap: 1.5rem; align-items: flex-start; border-left: 1px solid rgba(30, 64, 175, 0.08); transition: right 0.4s; }
       .nav-links.open { right: 0; }
       .nav-toggle { display: flex; }
