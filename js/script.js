@@ -19,15 +19,27 @@
 
     const toggle = document.getElementById('navToggle');
     const links = document.getElementById('navLinks');
-    toggle.addEventListener('click', () => { toggle.classList.toggle('open'); links.classList.toggle('open'); });
-    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { toggle.classList.remove('open'); links.classList.remove('open'); }));
+    toggle.addEventListener('click', () => {
+      const isOpen = toggle.classList.toggle('open');
+      links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', isOpen);
+    });
+    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      toggle.classList.remove('open');
+      links.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }));
 
     // ---- MENU TABS ----
     document.querySelectorAll('.menu-tab').forEach(tab => {
       tab.addEventListener('click', () => {
-        document.querySelectorAll('.menu-tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.menu-tab').forEach(t => {
+          t.classList.remove('active');
+          t.setAttribute('aria-selected', 'false');
+        });
         document.querySelectorAll('.menu-panel').forEach(p => p.classList.remove('active'));
         tab.classList.add('active');
+        tab.setAttribute('aria-selected', 'true');
         document.getElementById('panel-' + tab.dataset.panel).classList.add('active');
       });
     });
@@ -59,6 +71,40 @@
     themeToggle.addEventListener('click', () => {
       const current = document.documentElement.getAttribute('data-theme');
       setTheme(current === 'dark' ? 'light' : 'dark');
+    });
+
+    // ---- FORM VALIDATION ----
+    document.querySelectorAll('form[novalidate]').forEach(form => {
+      form.addEventListener('submit', e => {
+        let valid = true;
+        form.querySelectorAll('[required]').forEach(input => {
+          const error = document.getElementById(input.id + '-error');
+          if (!error) return;
+          if (!input.value.trim()) {
+            error.textContent = 'Bu alan zorunludur.';
+            input.setAttribute('aria-invalid', 'true');
+            valid = false;
+          } else if (input.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value)) {
+            error.textContent = 'Geçerli bir e-posta adresi giriniz.';
+            input.setAttribute('aria-invalid', 'true');
+            valid = false;
+          } else {
+            error.textContent = '';
+            input.removeAttribute('aria-invalid');
+          }
+        });
+        if (!valid) e.preventDefault();
+      });
+      form.querySelectorAll('[required]').forEach(input => {
+        input.addEventListener('input', () => {
+          const error = document.getElementById(input.id + '-error');
+          if (!error) return;
+          if (input.value.trim()) {
+            error.textContent = '';
+            input.removeAttribute('aria-invalid');
+          }
+        });
+      });
     });
 
 

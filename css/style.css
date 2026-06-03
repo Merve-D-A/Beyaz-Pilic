@@ -62,6 +62,24 @@
 
     html { scroll-behavior: smooth; }
 
+    .skip-link {
+      position: absolute; top: -100px; left: 8px; z-index: 1000;
+      background: var(--navy); color: #fff; padding: 0.6rem 1.4rem;
+      border-radius: 0 0 8px 8px; font-size: 0.85rem; font-weight: 600;
+      text-decoration: none; transition: top 0.25s;
+    }
+    .skip-link:focus { top: 0; }
+
+    :focus-visible {
+      outline: 2.5px solid var(--navy);
+      outline-offset: 2px;
+    }
+
+    .cf-error {
+      display: block; font-size: 0.72rem; color: #dc2626;
+      margin-top: 0.2rem; min-height: 1rem;
+    }
+
     .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
 
     h1, h2, h3, h4, h5, h6 { font-weight: inherit; }

@@ -21,35 +21,37 @@
 </head>
 <body>
 
-  <div class="noise"></div>
+  <a href="#main-content" class="skip-link">İçeriğe geç</a>
+
+  <div class="noise" aria-hidden="true"></div>
 
   <header>
-    <nav id="nav">
-      <a href="#" class="nav-logo">BEYAZ<span>PİLİÇ</span></a>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#">Ana Sayfa</a></li>
+    <nav id="nav" role="navigation" aria-label="Ana gezinme">
+      <a href="#" class="nav-logo" aria-label="Ana sayfaya dön">BEYAZ<span>PİLİÇ</span></a>
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="#" aria-current="page">Ana Sayfa</a></li>
         <li><a href="#about">Hakkımızda</a></li>
         <li><a href="#menu">Menü</a></li>
         <li><a href="#branches">Şubeler</a></li>
         <li><a href="#testimonials">Yorumlar</a></li>
         <li><a href="#contact">İletişim</a></li>
       </ul>
-      <button class="nav-toggle" id="navToggle" aria-label="Menü">
+      <button class="nav-toggle" id="navToggle" aria-label="Menüyü aç/kapat" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </nav>
   </header>
 
-  <main>
-    <section class="hero" id="hero">
-      <div class="coal-texture"></div>
-      <div class="hero-glow"></div>
-      <div class="hero-coal-bed"></div>
-      <div class="ember-particles" id="embers"></div>
-      <div class="ember-glow"></div>
-      <div class="ember-glow"></div>
+  <main id="main-content">
+    <section class="hero" id="hero" aria-label="Tanıtım">
+      <div class="coal-texture" aria-hidden="true"></div>
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-coal-bed" aria-hidden="true"></div>
+      <div class="ember-particles" id="embers" aria-hidden="true"></div>
+      <div class="ember-glow" aria-hidden="true"></div>
+      <div class="ember-glow" aria-hidden="true"></div>
       <div class="hero-content">
-        <div class="hero-badge"><span class="fire-dot"></span> Izgaranın Başkenti</div>
+        <div class="hero-badge"><span class="fire-dot" aria-hidden="true"></span> Izgaranın Başkenti</div>
         <h1>KÖZDE<br><span class="flame-text">BEYAZ PİLİÇ</span></h1>
         <p>Çiğ tavuk, közde pişirim, uygun fiyat — gel-al paket ve 4 platformda sipariş kolaylığı.</p>
         <div class="hero-buttons">
@@ -62,7 +64,7 @@
       </div>
     </section>
 
-    <section id="about">
+    <section id="about" aria-label="Hakkımızda">
       <div class="container">
         <span class="section-label">Hakkımızda</span>
         <div class="about-grid">
@@ -84,27 +86,27 @@
       </div>
     </section>
 
-    <section id="menu">
+    <section id="menu" aria-label="Menü">
       <div class="container">
         <span class="section-label">Lezzet Haritası</span>
         <h2 class="section-title">KÖZDE<br>MÜKEMMELLEŞEN</h2>
         <p class="section-sub">Çiğ tavuğunu al, ister közde pişirt ister kendin pişir.</p>
 
-        <div class="menu-tabs">
-          <button class="menu-tab active" data-panel="tavuk">Tavuk Çeşitleri</button>
-          <button class="menu-tab" data-panel="diger">Diğer Ürünler</button>
+        <div class="menu-tabs" role="tablist" aria-label="Menü kategorileri">
+          <button class="menu-tab active" role="tab" aria-selected="true" data-panel="tavuk">Tavuk Çeşitleri</button>
+          <button class="menu-tab" role="tab" aria-selected="false" data-panel="diger">Diğer Ürünler</button>
         </div>
 
         <div class="menu-panels">
-          <div class="menu-panel active" id="panel-tavuk">
+          <div class="menu-panel active" id="panel-tavuk" role="tabpanel">
             <div class="menu-cards">
               <div class="menu-card wide">
                 <div class="menu-card-header">
-                  <span class="menu-card-icon">🍗</span>
+                  <span class="menu-card-icon" aria-hidden="true">🍗</span>
                   <span class="menu-card-title">Tavuk Çeşitleri</span>
                   <span class="menu-card-count">11 çeşit</span>
                 </div>
-                <div class="menu-cut-notice">🔪 <strong>Mangallık, sotelik, jülyen</strong> kesim çeşitlerinin hepsi yapılmaktadır</div>
+                <div class="menu-cut-notice"><span aria-hidden="true">🔪</span> <strong>Mangallık, sotelik, jülyen</strong> kesim çeşitlerinin hepsi yapılmaktadır</div>
                 <div class="menu-items">
                   <div class="menu-item">
                     <span class="menu-bullet"></span>
@@ -166,11 +168,11 @@
             </div>
           </div>
 
-          <div class="menu-panel" id="panel-diger">
+          <div class="menu-panel" id="panel-diger" role="tabpanel">
             <div class="menu-cards">
               <div class="menu-card wide">
                 <div class="menu-card-header">
-                  <span class="menu-card-icon">🧂</span>
+                  <span class="menu-card-icon" aria-hidden="true">🧂</span>
                   <span class="menu-card-title">Diğer Ürünler</span>
                   <span class="menu-card-count">5 çeşit</span>
                 </div>
@@ -214,7 +216,7 @@
 
 
 
-    <section id="branches">
+    <section id="branches" aria-label="Şubeler">
       <div class="container">
         <span class="section-label">Şubelerimiz</span>
         <h2 class="section-title">İKİ NOKTA<br>TEK LEZZET</h2>
@@ -224,11 +226,11 @@
             <h3>YENİŞEHİR</h3>
             <span class="branch-tag">★ Kök Şube</span>
             <div class="branch-detail">
-              <span class="icon">📍</span>
+              <span class="icon" aria-hidden="true">📍</span>
               <p>Akkent Mahallesi, 2357 Sokak, Bersu Apartmanı No:21 A, Yenişehir / Mersin</p>
             </div>
             <div class="branch-detail">
-              <span class="icon">📞</span>
+              <span class="icon" aria-hidden="true">📞</span>
               <p><strong>0552 886 22 33</strong></p>
             </div>
             <div class="branch-hours">
@@ -244,7 +246,7 @@
               <p>Yeni Mahallesi, 33180 Sokak, Aktan Residence Sitesi C Blok No:10/B (Cihanberk Fırın Çaprazı), Mezitli / Mersin</p>
             </div>
             <div class="branch-detail">
-              <span class="icon">📞</span>
+              <span class="icon" aria-hidden="true">📞</span>
               <p><strong>0545 437 21 33</strong></p>
             </div>
             <div class="branch-hours">
@@ -256,23 +258,23 @@
       </div>
     </section>
 
-    <section id="testimonials">
+    <section id="testimonials" aria-label="Yorumlar">
       <div class="container">
         <span class="section-label">Yorumlar</span>
         <h2 class="section-title">MİSAFİRLERİMİZ<br>NE DİYOR?</h2>
         <div class="testimonials-grid">
           <article class="testimonial-card">
-            <div class="testimonial-stars">★★★★★</div>
+            <div class="testimonial-stars" role="img" aria-label="5 üzerinden 5 yıldız">★★★★★</div>
             <p>"1 senedir bu mahalledeyim güzel yüzlü yaklaşım mantısından şalgamına tertemiz tavuk ürünlerinden baharatlarına ve lezzetlerine kadar her şey efsane üstelik uygun fiyatlar emeğinize sağlık teşekkürler."</p>
             <div class="testimonial-author">— Yaren</div>
           </article>
           <article class="testimonial-card">
-            <div class="testimonial-stars">★★★★★</div>
+            <div class="testimonial-stars" role="img" aria-label="5 üzerinden 5 yıldız">★★★★★</div>
             <p>"Çok memnunuz, senelerdir alışveriş yaparız bir sıkıntı olmadı..."</p>
             <div class="testimonial-author">— Serkan</div>
           </article>
           <article class="testimonial-card">
-            <div class="testimonial-stars">★★★★☆</div>
+            <div class="testimonial-stars" role="img" aria-label="5 üzerinden 4 yıldız">★★★★☆</div>
             <p>"Her zaman tavuğumu buradan alıyorum, pişirilecek bir şey olduğunda buraya pişirttiriyorum dışarıya göre inanılmaz uyguna lezzetli bir öğün tüketmiş oluyorum. Ayrıca çalışanların güzel yüzlü ve samimi olması da artı bir nokta"</p>
             <div class="testimonial-author">— Yiğit</div>
           </article>
@@ -280,22 +282,22 @@
       </div>
     </section>
 
-    <section id="contact">
-      <div class="contact-glow"></div>
+    <section id="contact" aria-label="İletişim">
+      <div class="contact-glow" aria-hidden="true"></div>
       <div class="container">
         <span class="section-label">Bizimle İletişime Geçin</span>
         <h2 class="section-title">SİPARİŞ VE<br>PİŞİRİM TALEBİ</h2>
         <p class="section-sub">Sorularınız, toplu siparişleriniz veya özel pişirim talepleriniz için bize yazın.</p>
 
-        <div class="contact-rule">
+        <div class="contact-rule" aria-hidden="true">
           <span></span><span></span><span></span><span></span><span></span>
         </div>
 
         <div class="contact-grid">
-          <aside class="contact-info-card">
-            <div class="contact-info-accent"></div>
+          <aside class="contact-info-card" aria-label="İletişim bilgileri">
+            <div class="contact-info-accent" aria-hidden="true"></div>
             <div class="contact-info-head">
-              <span class="contact-info-icon">📍</span>
+              <span class="contact-info-icon" aria-hidden="true">📍</span>
               <h3>Bize Ulaşın</h3>
             </div>
             <div class="contact-info-list">
@@ -317,36 +319,40 @@
             </div>
           </aside>
 
-          <div class="contact-form-card">
-            <div class="contact-form-accent"></div>
+          <div class="contact-form-card" aria-label="İletişim formu">
+            <div class="contact-form-accent" aria-hidden="true"></div>
             <div class="contact-form-head">
-              <span class="contact-form-icon">✉️</span>
+              <span class="contact-form-icon" aria-hidden="true">✉️</span>
               <h3>Mesaj Gönderin</h3>
             </div>
-            <form action="https://formsubmit.co/ramzancengiz165@gmail.com" method="POST">
+            <form action="https://formsubmit.co/ramzancengiz165@gmail.com" method="POST" novalidate>
               <input type="hidden" name="_captcha" value="false">
               <input type="hidden" name="_next" value="https://beyaz-pilic.vercel.app">
               <div class="cf-row">
                 <div class="cf-group">
                   <label for="cname2">Adınız Soyadınız</label>
-                  <input type="text" name="name" id="cname2" required>
+                  <input type="text" name="name" id="cname2" required aria-describedby="name-error">
+                  <span class="cf-error" id="name-error" role="alert"></span>
                 </div>
                 <div class="cf-group">
                   <label for="cemail2">E-Posta Adresiniz</label>
-                  <input type="email" name="email" id="cemail2" required>
+                  <input type="email" name="email" id="cemail2" required aria-describedby="email-error">
+                  <span class="cf-error" id="email-error" role="alert"></span>
                 </div>
               </div>
               <div class="cf-group">
                 <label for="csubject2">Konu</label>
-                <input type="text" name="subject" id="csubject2" required>
+                <input type="text" name="subject" id="csubject2" required aria-describedby="subject-error">
+                <span class="cf-error" id="subject-error" role="alert"></span>
               </div>
               <div class="cf-group">
                 <label for="cmessage2">Mesajınız</label>
-                <textarea name="message" id="cmessage2" rows="4" required></textarea>
+                <textarea name="message" id="cmessage2" rows="4" required aria-describedby="message-error"></textarea>
+                <span class="cf-error" id="message-error" role="alert"></span>
               </div>
               <button type="submit" class="btn-custom btn-primary-custom cf-submit">
                 Mesaj Gönder
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
               </button>
             </form>
           </div>
@@ -355,7 +361,7 @@
     </section>
   </main>
 
-  <footer id="footer">
+  <footer id="footer" role="contentinfo">
     <div class="footer-grid">
       <div class="footer-brand">
         <h2>BEYAZ<span>PİLİÇ</span></h2>
@@ -363,16 +369,16 @@
       </div>
       <div class="footer-col">
         <h4>Şubeler</h4>
-        <p>📍 Yenişehir: 0552 886 22 33</p>
-        <p>📍 Mezitli: 0545 437 21 33</p>
-        <p>⏰ 09:00 – 20:00</p>
+        <p><span aria-hidden="true">📍</span> Yenişehir: 0552 886 22 33</p>
+        <p><span aria-hidden="true">📍</span> Mezitli: 0545 437 21 33</p>
+        <p><span aria-hidden="true">⏰</span> 09:00 – 20:00</p>
       </div>
       <div class="footer-col">
         <h4>Platformlar</h4>
-        <a href="https://getir.com/yemek/restoran/beyaz-pilic-mangal-yenisehir-akkent-mah-yenisehir-mersin/" target="_blank" rel="noopener">GetirYemek</a>
+        <a href="https://getir.com/yemek/restoran/beyaz-pilic-mangal-yenisehir-akkent-mah-yenisehir-mersin/" target="_blank" rel="noopener" aria-label="GetirYemek'te sipariş ver">GetirYemek</a>
         <p>TrendyolExpress</p>
-        <a href="https://www.yemeksepeti.com/restaurant/uh60/beyaz-pilic-mangal" target="_blank" rel="noopener">YemekSepeti</a>
-        <a href="https://www.migros.com.tr/yemek/kozde-beyaz-pilic-yenisehir-akkent-mah-st-253fc" target="_blank" rel="noopener">MigrosYemek</a>
+        <a href="https://www.yemeksepeti.com/restaurant/uh60/beyaz-pilic-mangal" target="_blank" rel="noopener" aria-label="YemekSepeti'nde sipariş ver">YemekSepeti</a>
+        <a href="https://www.migros.com.tr/yemek/kozde-beyaz-pilic-yenisehir-akkent-mah-st-253fc" target="_blank" rel="noopener" aria-label="MigrosYemek'te sipariş ver">MigrosYemek</a>
       </div>
       <div class="footer-col">
         <h4>Hızlı Linkler</h4>
@@ -390,9 +396,9 @@
     </div>
   </footer>
 
-  <button class="theme-toggle" id="themeToggle" aria-label="Karanlık mod">
-    <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-    <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+  <button class="theme-toggle" id="themeToggle" aria-label="Karanlık modu değiştir">
+    <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
   </button>
   <script src="js/script.js"></script>
 </body>

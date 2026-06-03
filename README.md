@@ -6,7 +6,7 @@ Mersin'in köklü esnaflarından **Beyaz Piliç** için İleri Web Tasarımı de
 
 ## 🚀 Canlı Yayın Bağlantısı
 Sitenin yayındaki haline aşağıdaki adresten ulaşabilirsiniz:
-👉 **[beyaz-pilic.netlify.app](https://beyaz-pilic.vercel.app)**
+👉 **[beyaz-pilic.vercel.app](https://beyaz-pilic.vercel.app)**
 
 ---
 
