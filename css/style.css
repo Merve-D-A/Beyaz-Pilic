@@ -60,6 +60,7 @@
       --footer-glow-color-2: rgba(240, 192, 0, 0.06);
     }
 
+
     html { scroll-behavior: smooth; }
 
     .skip-link {
@@ -639,6 +640,18 @@
       border-color: var(--navy);
       background: #fff;
       box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.06);
+    }
+    [data-theme="dark"] .cf-group input,
+    [data-theme="dark"] .cf-group textarea {
+      background: #1a1a1a;
+      color: #f0ece4;
+      border-color: rgba(79, 123, 255, 0.15);
+    }
+    [data-theme="dark"] .cf-group input:focus,
+    [data-theme="dark"] .cf-group textarea:focus {
+      background: #222;
+      border-color: var(--navy);
+      box-shadow: 0 0 0 3px rgba(79, 123, 255, 0.1);
     }
 
     /* Submit Button */

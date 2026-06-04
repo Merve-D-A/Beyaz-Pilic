@@ -26,3 +26,22 @@ Sitenin yayındaki haline aşağıdaki adresten ulaşabilirsiniz:
 * **SEO & Erişilebilirlik:** Tüm görseller için arama motoru optimizasyonlu (SEO) ve ekran okuyucu uyumlu `alt` etiketleri tanımlanmıştır.
 
 ---
+
+## 📸 Ekran Görüntüleri
+
+![site1](docs/screenshots/site1.png)
+![site2](docs/screenshots/site2.png)
+![site3](docs/screenshots/site3.png)
+![site4](docs/screenshots/site4.png)
+![site5](docs/screenshots/site5.png)
+![site6](docs/screenshots/site6.png)
+![site7](docs/screenshots/site7.png)
+![site8](docs/screenshots/site8.png)
+![site9](docs/screenshots/site9.png)
+![site10](docs/screenshots/site10.png)
+![site11](docs/screenshots/site11.png)
+![site12](docs/screenshots/site12.png)
+![site13](docs/screenshots/site13.png)
+![site14](docs/screenshots/site14.png)
+
+---
